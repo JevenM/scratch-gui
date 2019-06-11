@@ -1,6 +1,11 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 
+import helloworldIconURL from './helloworld/helloworld.png';
+import helloworldInsetIconURL from './helloworld/helloworld-small.svg'
+
+
+
 import musicIconURL from './music/music.png';
 import musicInsetIconURL from './music/music-small.svg';
 
@@ -63,6 +68,26 @@ export default [
                 defaultMessage="Play instruments and drums."
                 description="Description for the 'Music' extension"
                 id="gui.extension.music.description"
+            />
+        ),
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Helloworld"
+                description="Name for the 'hello world' extension"
+                id="gui.extension.helloworld.name"
+            />
+        ),
+        extensionId: 'helloworld',
+        iconURL: helloworldIconURL,
+        insetIconURL: helloworldInsetIconURL,
+        description:(
+            <FormattedMessage
+                defaultMessage="hello world"
+                description="Description for the 'hello world' extension"
+                id="gui.extension.helloworld.description" 
             />
         ),
         featured: true
