@@ -4,6 +4,8 @@ import {FormattedMessage} from 'react-intl';
 import autopilotIconURL from './autopilot/autopilot.png';
 import autopilotInsetIconURL from './autopilot/autopilot-small.svg'
 
+import knnIconURL from './knn/knn.png';
+import knnInsetIconURL from './knn/knn-small.svg'
 
 
 import musicIconURL from './music/music.png';
@@ -108,6 +110,26 @@ export default [
                 defaultMessage="训练模式"
                 description="Description for the 'auto pilot' extension"
                 id="gui.extension.autopilottrain.description" 
+            />
+        ),
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="knn"
+                description="Name for the 'knn' extension"
+                id="gui.extension.knn.name"
+            />
+        ),
+        extensionId: 'knn',
+        iconURL: knnIconURL,
+        insetIconURL: knnInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="start a knn project."
+                description="Description for the 'knn' extension"
+                id="gui.extension.knn.description"
             />
         ),
         featured: true
