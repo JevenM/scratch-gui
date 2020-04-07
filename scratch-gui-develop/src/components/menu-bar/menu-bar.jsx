@@ -30,7 +30,8 @@ import DeletionRestorer from '../../containers/deletion-restorer.jsx';
 import TurboMode from '../../containers/turbo-mode.jsx';
 import MenuBarHOC from '../../containers/menu-bar-hoc.jsx';
 
-import {openTipsLibrary} from '../../reducers/modals';
+import {openTipsLibrary, openbbs} from '../../reducers/modals';
+
 import {setPlayer} from '../../reducers/mode';
 import {
     autoUpdateProject,
@@ -471,6 +472,14 @@ class MenuBar extends React.Component {
                         </div>
                     </div>
                     <Divider className={classNames(styles.divider)} />
+                    <div 
+                        className={className(styles.menuBarItem, styles.hoverable)}
+                        onClick={this.props.onOpendds}
+                    >
+                        论坛
+                    </div>
+                    
+                    <Divider className={classNames(styles.divider)} />
                     <div
                         aria-label={this.props.intl.formatMessage(ariaMessages.tutorials)}
                         className={classNames(styles.menuBarItem, styles.hoverable)}
@@ -793,7 +802,8 @@ const mapDispatchToProps = dispatch => ({
     onClickRemix: () => dispatch(remixProject()),
     onClickSave: () => dispatch(manualUpdateProject()),
     onClickSaveAsCopy: () => dispatch(saveProjectAsCopy()),
-    onSeeCommunity: () => dispatch(setPlayer(true))
+    onSeeCommunity: () => dispatch(setPlayer(true)),
+    onOpenbbs: () => dispatch(openbbs)
 });
 
 export default compose(
